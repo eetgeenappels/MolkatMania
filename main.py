@@ -13,10 +13,9 @@ height = 960
 screen = pygame.display.set_mode((width, height))
 
 # Set the title of the window
-pygame.display.set_caption("Hello")
+pygame.display.set_caption("Molkat Mania")
 
 # Run the game loop
-running = True
-while running:
+while True:
 
     molkat_mania.tick(screen)
