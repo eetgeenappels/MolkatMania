@@ -6,8 +6,8 @@ pygame.init()
 pygame.font.init()
 
 # Set the dimensions of the window
-width = 800
-height = 800
+width = 1280
+height = 960
 
 # Create a window
 screen = pygame.display.set_mode((width, height))
