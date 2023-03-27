@@ -21,8 +21,10 @@ pygame.display.set_caption("Molkat Mania")
 # Run the game loop
 while True:
 
-    molkat_mania.tick(screen)
+    #fill the screen with white
+    screen.fill((255, 255, 255))
 
+    molkat_mania.tick(screen)
     # Makes screen work
     pygame.display.flip()
     clock.tick(60)
