@@ -5,3 +5,6 @@ def tick(screen):
         if event.type == pygame.QUIT:
             pygame.quit()
             quit()
+
+
+            
