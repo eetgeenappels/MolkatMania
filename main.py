@@ -12,6 +12,9 @@ height = 960
 # Create a window
 screen = pygame.display.set_mode((width, height))
 
+# Clock
+clock = pygame.time.Clock()
+
 # Set the title of the window
 pygame.display.set_caption("Molkat Mania")
 
@@ -19,3 +22,7 @@ pygame.display.set_caption("Molkat Mania")
 while True:
 
     molkat_mania.tick(screen)
+
+    # Makes screen work
+    pygame.display.flip()
+    clock.tick(60)
