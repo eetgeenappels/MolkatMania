@@ -1,4 +1,5 @@
 import pygame
+import Scenes
 
 #general object type for something that you can draw on the screen
 class GameObject():
@@ -25,8 +26,9 @@ class Player(GameObject):
 #define player
 player = Player()
 
-#gameobject list
-scene_gameobjects = [player]
+#current scene
+current_scene = Scenes.Scene()
+current_scene.scene_objects.append(player)
 
 def tick(screen):
     for event in pygame.event.get():
@@ -58,10 +60,13 @@ def tick(screen):
  
 
     #tick gameobjects
-    for gameobject in scene_gameobjects:
+    for gameobject in current_scene.scene_objects:
         gameobject.tick()
 
+    #render Scene
+    current_scene.render(screen)
+
     #render gameobjects
-    for gameobject in scene_gameobjects:
+    for gameobject in current_scene.scene_objects:
         gameobject.render(screen)            
     
