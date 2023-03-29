@@ -22,7 +22,7 @@ pygame.display.set_caption("Molkat Mania")
 while True:
 
     #fill the screen with white
-    screen.fill((255, 255, 255))
+    screen.fill((55, 174, 15))
 
     molkat_mania.tick(screen)
     # Makes screen work
