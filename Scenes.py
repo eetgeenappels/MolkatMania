@@ -1,5 +1,6 @@
 import pygame
-import contants
+
+grasspng = pygame.transform.scale(pygame.image.load("Textures/Grass texture.png"), (96, 96))
 
 #Base scene objects
 class Scene:
@@ -8,6 +9,10 @@ class Scene:
     
     def render(self, screen):
         for i in range(0,20):
-            pygame.draw.aaline(screen, (0, 0, 0), (i*100, 0), (i*100, contants.screen_height))
+            pygame.draw.aaline(screen, (0, 0, 0), (i*100, 0), (i*100, 960))
         for i in range(0,20):
-            pygame.draw.aaline(screen, (0, 0, 0), (0, i*100), (contants.screen_width, i*100))
+            pygame.draw.aaline(screen, (0, 0, 0), (0, i*100), (1280, i*100))
+        for i in range(0,20):
+            screen.blit(grasspng, ((i*96, 0), (i*96, 960)))
+        for i in range(0,20):
+            screen.blit(grasspng, ((0, i*96), (1280, i*96)))
