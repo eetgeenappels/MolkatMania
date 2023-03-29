@@ -1,6 +1,9 @@
 import pygame
+import random
 
-grasspng = pygame.transform.scale(pygame.image.load("Textures/Grass texture.png"), (96, 96))
+grasspng1 = pygame.transform.scale(pygame.image.load("Textures/Grass texture.png"), (96, 96))
+grasspng2 = pygame.transform.scale(pygame.image.load("Textures/Grass texture2.png"), (96, 96))
+grasspng3 = pygame.transform.scale(pygame.image.load("Textures/Grass texture3.png"), (96, 96))
 
 #Base scene objects
 class Scene:
@@ -14,4 +17,4 @@ class Scene:
             pygame.draw.aaline(screen, (0, 0, 0), (0, i*100), (1280, i*100))
         for x in range(0,20):
             for y in range(0,20):
-                screen.blit(grasspng, (x*96, y*96))
+                screen.blit(grasspng1, (x*96, y*96))
