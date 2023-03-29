@@ -7,12 +7,11 @@ class Scene:
     def __init__(self) -> None:
         self.scene_objects = []
     
-    def render(self, screen):
+    def render(self, screen: pygame.Surface):
         for i in range(0,20):
             pygame.draw.aaline(screen, (0, 0, 0), (i*100, 0), (i*100, 960))
         for i in range(0,20):
             pygame.draw.aaline(screen, (0, 0, 0), (0, i*100), (1280, i*100))
-        for i in range(0,20):
-            screen.blit(grasspng, ((i*96, 0), (i*96, 960)))
-        for i in range(0,20):
-            screen.blit(grasspng, ((0, i*96), (1280, i*96)))
+        for x in range(0,20):
+            for y in range(0,20):
+                screen.blit(grasspng, (x*96, y*96))
